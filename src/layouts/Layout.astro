@@ -1,0 +1,22 @@
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+import '../styles/style.scss';
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{ title }</title>
+  </head>
+  <body>
+		<Header />
+    <main class="l-main">
+      <slot />
+    </main>
+		<Footer />
+    <script type="module" src="/assets/js/index.js"></script>
+  </body>
+</html>

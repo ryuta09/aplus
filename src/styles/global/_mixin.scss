@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "./function" as fn;
+@use "./variable" as var;
+
+$breakpoints: (
+  xs:  375px,
+  xxs: 415px,
+  sm:  576px,
+  md:  768px,
+  lg:  1024px,
+  xl:  1280px,
+  2xl: 1536px,
+) !default;
+
+// メディアクエリのMixin
+@mixin mq($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn '無効なブレイクポイント: #{$breakpoint}。次のいずれかを使用してください: #{map-keys($breakpoints)}.';
+  }
+}
+
+//アニメーションのmixin化
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+  animation: {
+    name: $name;
+    duration: $duration;
+    timing-function: $timing-function;
+    delay: $delay;
+    iteration-count: $iteration-count;
+    direction: $direction;
+    fill-mode: $fill-mode;
+  }
+}
+
+//フォント用のmixin
+@mixin font-vw($font_size: 10, $viewsize: 375) {
+  font-size: $font_size * 1px;
+  font-size: fn.get_vw($font_size, $viewsize);
+}

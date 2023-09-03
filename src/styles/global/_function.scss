@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+// font-sizeをpxからremに変更する関数
+@function rem($font_size, $base: 10){
+  @return math.div($font_size, $base) * 1rem;
+}
+
+// SPデザインでfont-sizeをVW単位にする
+@function get_vw($size, $vp: 375){
+  $rate: math.div(100, $vp);
+  @return $rate * $size * 1vw;
+}
+
+// line-heightをfont-sizeとデザインデータの数字から計算する
+//書き方) line-height: lh(24px, 16px); 第1引数に行の高さ,第2引数に文字サイズ
+@function lh($size, $fontSize){
+  @return math.div($size, $fontSize);
+}
+
