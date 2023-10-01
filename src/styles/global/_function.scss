@@ -6,13 +6,14 @@
 }
 
 // SPデザインでfont-sizeをVW単位にする
+//例)  @include font-vw(14, 375); 375pxのビューポートで14pxになる
 @function get_vw($size, $vp: 375){
   $rate: math.div(100, $vp);
   @return $rate * $size * 1vw;
 }
 
 // line-heightをfont-sizeとデザインデータの数字から計算する
-//書き方) line-height: lh(24px, 16px); 第1引数に行の高さ,第2引数に文字サイズ
+//例) line-height: lh(24px, 16px); 第1引数に行の高さ,第2引数に文字サイズ
 @function lh($size, $fontSize){
   @return math.div($size, $fontSize);
 }
