@@ -1,0 +1,49 @@
+@use '../global' as g;
+
+.c-bg {
+  padding-top: calc((292 / 375) * 100%);
+  position: relative;
+  @include g.mq(md) {
+    padding-top: calc((400 / 1280) * 100%);
+  }
+  @include g.mq(xl) {
+    height: 490px;
+  }
+
+  &--contact {
+    background: url(/assets/images/img-contact_footer-sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/img-contact_footer.webp) no-repeat center center / cover;
+    }
+  }
+  &--about {
+    background: url(/assets/images/bg-about_sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/bg-about.webp) no-repeat center center / cover;
+    }
+  }
+  &--service {
+    background: url(/assets/images/bg-service_sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/bg-service.webp) no-repeat center center / cover;
+    }
+  }
+  &--news {
+    background: url(/assets/images/bg-news_sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/bg-news.webp) no-repeat center center / cover;
+    }
+  }
+  &--recruit {
+    background: url(/assets/images/bg-recruit_sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/bg-recruit.webp) no-repeat center center / cover;
+    }
+  }
+  &--contact-row{
+    background: url(/assets/images/bg-contact_sp.webp) no-repeat center center / cover;
+    @include g.mq(md) {
+      background: url(/assets/images/bg-contact.webp) no-repeat center center / cover;
+    }
+  }
+}

@@ -1,0 +1,276 @@
+@use '../global' as g;
+
+.p-recruit {
+
+}
+
+.p-recruit__inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include g.mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-recruit__thumb {
+  max-width: 680px;
+  width: 100%;
+  img {
+    
+  }
+}
+
+.p-recruit__body {
+  position: absolute;
+  bottom: -66px;
+  right: 0px;
+  flex: 0 0 241px;
+  display: inline-block;
+  padding: 1.6rem 7.2rem;
+  background: g.$white;
+  @include g.mq(sm) {
+    right: -60px;
+    bottom: -55px;
+    padding: 3.4rem 14.7rem;
+  }
+  @include g.mq(lg) {
+    flex: 0 0 424px;
+    bottom: -24px;
+    right: 6px;
+  }
+}
+
+.p-recruit__title {
+
+}
+
+
+/*==========================================================
+# Recruit下層ページ : メッセージ
+========================================================= */
+
+.p-recruit-row {
+  padding: 6.4rem 0 8rem 0;
+  letter-spacing: g.$ls8;
+  @include g.mq(md) {
+    padding: 10.4rem 0;
+  }
+}
+
+.p-recruit-message__title {
+
+}
+.p-recruit-message__inner {
+  max-width: 950px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include g.mq(md) {
+    flex-direction: row;
+    margin-top: 8rem;
+  }
+}
+.p-recruit-message__thumb {
+  margin-top: 2.4rem;
+  max-width: 396px;
+  @include g.mq(md) {
+    margin-top: 0;
+  }
+  img {
+
+  }
+}
+.p-recruit-message__body {
+  margin-top: 2.4rem;
+  margin-left: 0;
+  @include g.mq(md) {
+    margin-top: 0;
+    margin-left: 6.8rem;
+  }
+  & > p {
+    font-size: 1.2rem;
+    line-height: calc(32 / 12);
+  }
+}
+
+/*==========================================================
+# Recruit下層ページ : RECRUIT
+========================================================= */
+
+.p-recruit-job {
+  margin-top: 6.4rem;
+  @include g.mq(md) {
+    margin-top: 10.4rem;
+  }
+}
+.p-recruit-job__inner {
+  margin-top: 3.2rem;
+  @include g.mq(md) {
+    margin-top: 7.2rem;
+  }
+}
+.p-recruit-job__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @include g.mq(lg) {
+    gap: 4rem;
+    flex-direction: row;
+  }
+}
+.p-recruit-job__item {
+  padding: 3.2rem 1.6rem 2.4rem;
+  border: 1px solid g.$white;
+}
+.p-recruit-job__sub-head {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.p-recruit-job__thumb {
+  margin-top: 3rem;
+  img {
+
+  }
+}
+
+.p-recruit-job__text {
+  font-size: 1.6rem;
+  line-height: calc(26 / 16);
+  margin-top: 2.4rem;
+  @include g.mq(md) {
+    margin-top: 1.6rem;
+  }
+}
+
+/*==========================================================
+# Recruit下層ページ : FLOW - 選考フロー
+========================================================= */
+
+.p-recruit-flow {
+  margin-top: 6.4rem;
+  @include g.mq(md) {
+    margin-top: 10.4rem;
+  }
+}
+
+.p-recruit-flow__title {
+
+}
+
+.p-recruit-flow__inner {
+
+}
+
+.p-recruit-flow__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 4.5rem;
+  @include g.mq(md) {
+    margin-top: 9.5rem;
+  }
+}
+
+.p-recruit-flow__item {
+
+  position: relative;
+  border: 1px solid g.$white;
+  @include g.mq(md) {
+    display: flex;
+  }
+}
+
+.p-recruit-flow__number {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background: g.$white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include g.mq(md) {
+    position: static;
+    width: 120px;
+  }
+  span {
+    color: g.$gray;
+  }
+}
+
+.p-recruit-flow__body {
+  padding: 1.6rem 1.2rem 2.4rem 2.4rem;
+  @include g.mq(md) {
+    padding: 3.6rem 3rem 2.8rem 4.8rem;
+  }
+}
+.p-recruit-flow__sub-head {
+  font-size: 1.6rem;
+  text-align: center;
+  @include g.mq(sm) {
+    text-align: left;
+    margin-left: 4rem;
+  }
+  @include g.mq(md) {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+}
+.p-recruit-flow__text {
+  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  @include g.mq(md) {
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.p-recruit-flow__offer {
+  padding-top: 12.6rem;
+  font-size: 2.4rem;
+  text-align: center;
+  position: relative;
+  @include g.mq(md) {
+    padding-top: 11.2rem;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 64px;
+    background: g.$white;
+    display: block;
+    @include g.mq(md) {
+      top: 40px;
+    }
+  }
+}
+
+.p-recruit-flow__button {
+  margin-top: 6.4rem;
+  text-align: center;
+  @include g.mq(md) {
+    margin-top: 10.4rem;
+  }
+  a {
+    display: inline-block;
+    max-width: 254px;
+    width: 100%;
+    padding: 7.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    background: g.$white;
+    color: g.$gray;
+    letter-spacing: .8rem;
+    @include g.mq(md) {
+      max-width: 100%;
+    }
+  }
+}

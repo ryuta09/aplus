@@ -1,0 +1,140 @@
+@use '../global' as g;
+
+.p-contact-row {
+  padding: 7.2rem 0 8rem 0;
+  @include g.mq(md) {
+    padding: 9.6rem 0 10.4rem 0;
+  }
+  &__title {
+    color: g.$gray;
+    text-align: center;
+  }
+
+  &__form {
+    max-width: 583px;
+    margin-inline: auto;
+    &-inner {
+      margin-top: 6.4rem;
+      @include g.mq(md) {
+        margin-top: 8rem;
+      }
+    }
+  }
+
+  &__top {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: calc(28 / 18);
+  }
+
+  &__item {
+    font-weight: 600;
+    &:not(:first-child) {
+      margin-top: 1.8rem;
+      @include g.mq(md) {
+        margin-top: 2.4rem;
+      }
+    }
+    @include g.mq(md) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    @include g.mq(md) {
+      font-size: 1.6rem;
+      @include g.mq(md) {
+        width: 254px;
+      }
+    }
+    label {
+
+    }
+    &--textarea {
+      align-self: flex-start;
+    }
+  }
+
+  &__required {
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: .3rem 1.2rem;
+    border-radius: 1px;
+    text-align: center;
+    margin-left: 1.6rem;
+    border: 1px solid g.$white;
+    @include g.mq(md) {
+      margin-left: 1.8rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__input {
+    @include g.mq(md) {
+      width: calc(100% - 254px);
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      appearance: none;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      font: inherit;
+      outline: none;
+      background: g.$white;
+      width: 100%;
+      padding: 1.2rem 1.6rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      color:g.$gray;
+      font-size: 1.4rem;
+      &::placeholder {
+        font-size: 16px;
+        color: g.$gray;
+      }
+      @include g.mq(md) {
+        margin-top: 0;
+      }
+    }
+
+    textarea {
+      resize: none;
+      min-height: 114px;
+      @include g.mq(md) {
+        height: 136px;
+      }
+    }
+  }
+
+  &__submit {
+    text-align: center;
+    margin-top: 4.8rem;
+    input[type="submit"] {
+      border: none;
+      display: inline-block;
+      max-width: 243px;
+      width: 100%;
+      padding: 0.8rem 2rem;
+      font-size: 1.4rem;
+      line-height: 2;
+      border-radius: .1rem;
+      transition: all .3s;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid g.$white;
+      font-weight: 600;
+      &:hover {
+        color: g.$gray;
+        background: g.$white;
+      }
+    }
+  }
+
+
+}

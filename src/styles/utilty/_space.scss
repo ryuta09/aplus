@@ -1,0 +1,7 @@
+@use '../global' as g;
+
+@for $i from 1 through 10 {
+  .u-margin--#{$i} {
+    margin-top: $i * 8px;
+  }
+}

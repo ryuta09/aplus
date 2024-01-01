@@ -1,0 +1,27 @@
+@use '../global' as g;
+
+.c-arrow {
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  z-index: 100;
+  img {
+    width: 24px;
+    height: 160px;
+  }
+}
+
+.c-arrow--sp {
+  display: block;
+  @include g.mq(md) {
+    display: none;
+  }
+}
+
+.c-arrow--pc {
+  display: none;
+  @include g.mq(md) {
+    display: block;
+  }
+}
+

@@ -1,0 +1,16 @@
+@use '../global' as g;
+
+.l-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include g.mq(md) {
+    flex-direction: row;
+  }
+}
+
+.l-flex-reverse {
+  @include g.mq(md) {
+    flex-direction: row-reverse;
+  }
+}

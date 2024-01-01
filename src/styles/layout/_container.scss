@@ -1,1 +1,38 @@
 @use '../global' as g;
+
+.l-container {
+  width: min(88%, g.$inner);
+  margin-inline: auto;
+}
+
+.l-container--small {
+  width: min(78%, g.$inner);
+}
+
+.l-container--recruit {
+  width: min(78%, 1033px);
+}
+
+.l-container--service {
+  width: min(88%, 950px);
+}
+
+.l-container--news {
+  max-width: 824px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.l-container--recruit-job {
+  width: min(78%, g.$inner);
+  margin-inline: auto;
+}
+
+.l-container--recruit-flow {
+  width: min(78%, 816px);
+  margin-inline: auto;
+}
+
+.l-container--contact {
+  width: min(88%, 853px);
+}

@@ -2,14 +2,14 @@
 
 .u-hidden-sp {
     display: block;
-  @include g.mq(sm) {
+  @include g.mq(md) {
     display: none;
   }
 }
 
 .u-hidden-pc {
   display: none;
-  @include g.mq(sm) {
+  @include g.mq(md) {
     display: block;
   }
 }

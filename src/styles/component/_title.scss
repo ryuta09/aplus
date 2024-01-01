@@ -1,0 +1,38 @@
+@use '../global' as g;
+
+.c-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: g.$ls8;
+}
+
+.c-title__main {
+  font-size: 1.8rem;
+  @include g.mq(md) {
+    font-size: 2.4rem;
+    line-height: calc(38 / 24);
+  }
+}
+
+.c-title__sub {
+  font-size: 1.6rem;
+}
+.c-title__sub--large {
+  font-size: 1.6rem;
+  line-height: calc(38 / 24);
+  @include g.mq(md) {
+    font-size: 2.4rem;
+  }
+}
+
+.c-title--black {
+  color: g.$gray;
+}
+
+.c-title--absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}

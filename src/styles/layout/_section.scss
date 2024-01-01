@@ -1,0 +1,37 @@
+@use '../global' as g;
+
+.l-section {
+
+}
+
+.l-section--about {
+  padding-top: 5.6rem;
+  @include g.mq(md) {
+    padding-top: 8.8rem;
+  }
+}
+
+.l-section--service {
+  padding-top: 4rem;
+  @include g.mq(md) {
+    padding-top: 8.8rem;
+  }
+}
+.l-section--news {
+  padding-top: 8rem;
+  @include g.mq(md) {
+    padding-top: 8.8rem;
+  }
+}
+.l-section--slider {
+  padding-top: 8rem;
+  @include g.mq(md) {
+    padding-top: 8.8rem;
+  }
+}
+.l-section--recruit {
+  padding-top: 8rem;
+  @include g.mq(md) {
+    padding-top: 10.6rem;
+  }
+}

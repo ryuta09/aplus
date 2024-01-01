@@ -1,0 +1,52 @@
+@use '../global' as g;
+
+.p-slider {
+  margin-top: 8rem;
+  @include g.mq(md) {
+    margin-top: 8.8rem;
+  }
+}
+
+.p-slider__inner {
+  display: flex;
+  margin-top: 4.8rem;
+  @include g.mq(md) {
+    margin-top: 7.2rem;
+  }
+}
+
+.p-slider__item {
+
+}
+
+.p-slider__thumb {
+
+  width: 400px;
+  img {
+    width: 400px;
+    height: 280px;
+    object-fit: cover;
+  }
+}
+
+
+
+//sliderをhoverしたら他を白くさせる
+.swiper:hover {
+  .slide:not(:hover) {
+    @media only screen and (min-width: 1025px) {
+      opacity: .3;
+    }
+  }
+}
+
+.swiper-free-mode > .swiper-wrapper {
+  margin-top: 4.8rem!important;
+  @include g.mq(md) {
+    margin-top: 7.2rem!important;
+  }
+}
+
+.swiper-slide {
+  width: 400px!important;
+}

@@ -1,5 +1,247 @@
 @use '../global' as g;
 
 .l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 72px;
+  width: 100%;
+  z-index: 5000;
+  background: rgba(g.$blackBold, 0.25);
+  @include g.mq(lg) {
+    height: 100px;
+  }
+  &__inner {
+    padding-left: 24px;
+    padding-right: 67px;
+    position: relative;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    @include g.mq(lg) {
+      justify-content: space-between;
+      height: 100px;
+      padding: 0 14rem;
+      padding-left: 8.4rem;
+      padding-right: 10.6rem;
+    }
+    @include g.mq(xl) {
+      padding-left: 13.4rem;
+      padding-right: 15.6rem;
+    }
 
+  }
+
+  &__logo {
+    a {
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        aspect-ratio: 1 / 1;
+        @include g.mq(lg) {
+          width: 61px;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 2.4rem;
+      margin-left: 1rem;
+      font-weight: 400;
+      @include g.mq(lg) {
+        font-size: 4rem;
+        margin-left: 2.4rem;
+      }
+    }
+  }
+
+  &__nav {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100svh;
+    z-index: 100;
+    background: g.$black;
+    transition: all .3s;
+    @include g.mq(md) {
+      opacity: 1;
+      pointer-events: auto;
+      width: 40vw;
+      transform: translateX(100%);
+    }
+    @include g.mq(xl) {
+      opacity: 1;
+      pointer-events: auto;
+      position: static;
+      width: auto;
+      height: 100px;
+      background: transparent;
+      padding: 0;
+      transform: none;
+      margin-left: auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    @include g.mq(xl) {
+      background: transparent;
+      width: auto;
+      height: 100px;
+      border-radius: 0;
+      border: none;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 4rem;
+      @include g.mq(lg) {
+        margin-top: 0;
+        margin-left: 3.2rem;
+      }
+      &:last-child {
+        @include g.mq(xl) {
+          margin-left: 48px;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      @include g.mq(lg) {
+        height: 100px;
+        & .l-header__link {
+          position: relative;
+          @include g.mq(lg) {
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 20px;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background: g.$white;
+              transform-origin: left center;
+              transition: all .3s;
+            }
+            &:hover {
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+          @include g.mq(xl) {
+            line-height: 10rem;
+          }
+        }
+      }
+    }
+    
+    a {
+      display: block;
+      width: 100%;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: g.$white;
+    }
+
+    //SP時のメニューボタン
+    &--button {
+      width: 207px;
+      @include g.mq(xl) {
+        display: none;
+      }
+    }
+  }
+
+    &__buttons {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      margin-left: auto;
+      @include g.mq(xl) {
+        margin-left: 7.2rem;
+      }
+    }
+
+    &__button {
+      a {
+        
+      }
+    }
+
+  /* ハンバーガーメニュー
+  ------------------------------------*/
+  &__hamburger {
+    position: absolute;
+    width: 20px;
+    top: 50%;
+    z-index: 110;
+    transform: translateY(-60%);
+    right: 24px;
+    border: none;
+    background: transparent;
+    text-align: right;
+    @include g.mq(xl) {
+      display: none;
+    }
+    span {
+      width: 100%;
+      height: 2px;
+      display: block;
+      background: g.$white;
+      transition: transform 0.3s;
+      &:not(:first-child) {
+        width: calc((16 / 20) * 100%);
+        margin-left: auto;
+      }
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  
+}
+
+/* ハンバーガーメニューの挙動
+------------------------------------*/
+body.is-active {
+  overflow: hidden;
+  .l-header__hamburger {
+    span {
+      &:nth-child(1) {
+        transform: translateY(10px) rotate(135deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(-10px) scaleX(0);
+      }
+      &:nth-child(3) {
+        transform: translateY(-10px) rotate(-135deg);
+        width: 100%;
+      }
+    }
+    &::before {
+      content: '';
+    }
+  }
+
+  .l-header__contact {
+    display: none;
+  }
+  .l-header__nav {
+    opacity: 1;
+    pointer-events: auto;
+    @include g.mq(md) {
+      transform: translateX(0);
+    }
+  }
 }

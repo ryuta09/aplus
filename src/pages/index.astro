@@ -2,8 +2,193 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="コーディング">
-	<section>
-		<h1>ここにmainが入ります。</h1>
+<Layout title="TOP">
+	<section class="l-mv">
+    <ul class="l-mv__list">
+      <li class="l-mv__item">
+        <img src="/assets/images/bg-top_mv1.webp" alt="">
+      </li>
+      <li class="l-mv__item">
+        <img src="/assets/images/bg-top_mv2.webp" alt="">
+      </li>
+      <li class="l-mv__item">
+        <img src="/assets/images/bg-top_mv3.webp" alt="">
+      </li>
+    </ul>
+    <h2 class="l-mv__title">ハイクオリティの空間を<br>あなたに</h2>
 	</section>
+  <div class="c-arrow c-arrow--sp js-arrow">
+    <img src="/assets/images/top-arrow.webp" alt="">
+  </div>
+
+  <section class="p-about l-section--about">
+    <h2 class="p-about__title c-title">
+      <span class="c-title__main">ABOUT US</span>
+      <span class="c-title__sub u-margin--1">私たちについて</span>
+    </h2>
+    <div class="p-about__inner l-container">
+      <figure class="p-about__img">
+        <img src="/assets/images/img-top_about.webp" alt="">
+      </figure>
+      <div class="p-about__cont">
+        <p class="p-about__top">あなたの人生に寄り添う家を<br>他にはない、高いクオリティでお届けします</p>
+        <p class="p-about__text">
+          理想の区間を形にし、快適さと美しさを融合させた豪華な住環境をご提案します。<br>
+          一流の建築家とデザイナーがあなたの要望をくみ取り、独創的なアイディアと最新技術を駆使して、唯一無二の住まいを実現いたします。
+        </p>
+        <div class="p-about__btn">
+          <a class="c-button" href="about.html">MORE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-parallax">
+    <div class="c-parallax__inner">
+      <div class="c-parallax__img" style="background-image: url(/assets/images/bg-parallax_top.webp)"></div>
+    </div>
+  </section>
+
+  <section class="p-service l-section--service" id="service">
+    <h2 class="p-service__title c-title">
+      <span class="c-title__main">SERVICE</span>
+      <span class="c-title__sub u-margin--1">サービス</span>
+    </h2>
+    <div class="p-service__inner l-container">
+      <ul class="p-service__list">
+        <li class="p-service__item">
+          <h3 class="p-service__head">オーダーメイド</h3>
+          <img class="p-service__thumb" src="/assets/images/img-service_top1.webp" alt="">
+        </li>
+        <li class="p-service__item">
+          <h3 class="p-service__head">コーディネート</h3>
+          <img class="p-service__thumb" src="/assets/images/img-service_top2.webp" alt="">
+        </li>
+        <li class="p-service__item">
+          <h3 class="p-service__head">ライフプランニング</h3>
+          <img class="p-service__thumb" src="/assets/images/img-service_top3.webp" alt="">
+        </li>
+      </ul>
+      <div class="p-service__btn c-button--center">
+        <a class="c-button" href="service.html">MORE</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-news l-section--news">
+    <h2 class="p-news__title c-title">
+      <span class="c-title__main">NEWS</span>
+      <span class="c-title__sub u-margin--1">ニュース</span>
+    </h2>
+    <div class="p-news__inner l-container l-container--small">
+      <ul class="p-news__list">
+        <li class="p-news__item">
+          <a href="">
+            <div class="p-news__info">
+              <time datetime="2023/06/24">2023/06/24</time>
+            </div>
+            <div class="p-news__lead">
+              <p>モデルルーム見学会 in 大宮</p>
+            </div>
+          </a>
+        </li>
+        <li class="p-news__item">
+          <a href="">
+            <div class="p-news__info">
+              <time datetime="2023/06/10">2023/06/10</time>
+            </div>
+            <div class="p-news__lead">
+              <p>住まいのデザインセミナー</p>
+            </div>
+          </a>
+        </li>
+        <li class="p-news__item">
+          <a href="">
+            <div class="p-news__info">
+              <time datetime="2023/05/29">2023/05/29</time>
+            </div>
+            <div class="p-news__lead">
+              <p>注文住宅完成見学会 in 前橋</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="p-news__btn c-button--center">
+        <a class="c-button" href="news.html">MORE</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-slider swiper l-section--slider">
+    <h2 class="p-news__title c-title">
+      <span class="c-title__main">DESIGN ROOM GALLERY</span>
+      <span class="c-title__sub u-margin--1">デザインルームギャラリー</span>
+    </h2>
+    <div class="p-slider__inner swiper-wrapper">
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider1.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider2.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider3.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider4.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider1.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider2.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider3.webp" alt="">
+        </div>
+      </div>
+      <div class="p-slider__item swiper-slide">
+        <div class="p-slider__thumb">
+          <img src="/assets/images/img-slider4.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-recruit l-section--recruit">
+    <div class="p-recruit__inner l-container l-container--recruit ">
+      <figure class="p-recruit__thumb">
+        <img src="/assets/images/img-recruit.webp" alt="">
+      </figure>
+      <div class="p-recruit__body">
+        <h2 class="p-news__title c-title">
+          <span class="c-title__main c-title--black">RECRUIT</span>
+          <span class="c-title__sub c-title--black c-title__sub--large u-margin--1">採用情報</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <div class="p-bg c-bg c-bg--contact">
+    <div class="p-bg__cont">
+      <h2 class="p-bg__title">contact us</h2>
+      <p class="p-bg__text">お気軽にご相談ください。</p>
+    </div>
+  </div>
+
+
 </Layout>
+
